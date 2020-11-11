@@ -7,6 +7,7 @@ class RestaurantsController < ApplicationController
   # A visitor can add a new restaurant,
   # and be redirected to the show view of that new restaurant.
   def show
+    # @review = Review.find(params[:restaurant_id])
     @restaurant = Restaurant.find(params[:id])
   end
 

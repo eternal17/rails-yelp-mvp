@@ -6,4 +6,14 @@
           Phone Number: #{@restaurant.phone_number}"%></li>
 </ul>
 
+<div class="container">
+<h2>Reviews</h2>
+  <ul>
+    <% @restaurant.reviews.each do |review| %>
+      <li><%="#{review.content} | Rating: #{review.rating}"%></li>
+    <% end %>
+  </ul>
+</div>
+
 <%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %>
+<%= link_to 'Back to Restaurants', restaurants_path %>
